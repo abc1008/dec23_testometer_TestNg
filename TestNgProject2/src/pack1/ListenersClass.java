@@ -33,15 +33,15 @@ public class ListenersClass extends EditAcc implements ITestListener  {
 		
 		System.out.println("onTestFailure "+result.getName());
 		
-		try 
-		{
-			CommonOps.CaptureSreen(driver, result.getName());
-			
-		} 
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
+//		try 
+//		{
+//			CommonOps.CaptureSreen(driver, result.getName());
+//			
+//		} 
+//		catch (IOException e) 
+//		{
+//			e.printStackTrace();
+//		}
 		
 		
 		

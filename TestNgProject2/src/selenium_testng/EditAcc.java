@@ -25,7 +25,7 @@ public class EditAcc
 		driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
 		
 
-		WebElement emailBox = driver.findElement(By.cssSelector("input#input-email"));
+		WebElement emailBox = driver.findElement(By.xpath("//*[@id='input-email"));
 		
 		emailBox.sendKeys("ag89111@gmail.com");  // enter email id on UI
 		
