@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 public class BaseTest {
 	
 	static WebDriver driver;
-	AccountLoginPage lp;   // non-static
+	static AccountLoginPage lp;   
 	
 	@BeforeSuite
 	public void initBrowser()

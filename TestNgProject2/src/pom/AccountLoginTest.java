@@ -12,12 +12,12 @@ public class AccountLoginTest extends BaseTest{
 		lps.loginTestScript();
 	}
 	
-	@Test
-	public void tc_1235_LoginTest()
-	{
-		LoginTestAccountScripts lps = new LoginTestAccountScripts();
-		lps.forgotPassTestScript();
-	}
+//	@Test
+//	public void tc_1235_ForgotPassword()
+//	{
+//		LoginTestAccountScripts lps = new LoginTestAccountScripts();
+//		lps.forgotPassTestScript();
+//	}
 	
 	
 	

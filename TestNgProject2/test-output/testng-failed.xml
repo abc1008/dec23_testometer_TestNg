@@ -5,7 +5,10 @@
     <classes>
       <class name="pom.AccountLoginTest">
         <methods>
-          <include name="tc_1234_LoginTest"/>
+          <include name="initObjects"/>
+          <include name="initBrowser"/>
+          <include name="tearDown"/>
+          <include name="tc_1235_ForgotPassword"/>
         </methods>
       </class> <!-- pom.AccountLoginTest -->
     </classes>

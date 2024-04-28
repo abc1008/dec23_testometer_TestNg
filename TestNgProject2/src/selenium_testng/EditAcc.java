@@ -48,7 +48,7 @@ public class EditAcc
 		
 		
 		
-		WebElement alertMsg =  driver.findElement(By.xpath("//di[contains(text(),'Success: Your account has been successfully updated.')]"));
+		WebElement alertMsg =  driver.findElement(By.xpath("//div[contains(text(),'Success: Your account has been successfully updated.')]"));
 		
 		
 		boolean isSuccessMsgDisplayed = alertMsg.isDisplayed();

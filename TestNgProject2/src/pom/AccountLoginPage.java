@@ -24,7 +24,7 @@ public class AccountLoginPage {
 	@FindBy(xpath = buttonLoginByXpath)
 	private WebElement buttonLogin;
 	
-	@FindBy(xpath = buttonLoginByXpath)
+	@FindBy(xpath = buttonForgotPasswordByXpath)
 	private WebElement buttonForgotPassword;
 	
 	
