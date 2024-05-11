@@ -11,6 +11,7 @@
           <include name="tearDown"/>
           <include name="login"/>
           <include name="logout"/>
+          <include name="tc_4568_EditAddrTest"/>
         </methods>
       </class> <!-- ecomm_TestSuite.MyAccountTestSuite -->
     </classes>
