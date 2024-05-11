@@ -9,18 +9,16 @@ import ecomm_TestScripts.MyAccountTestScripts;
 public class MyAccountTestSuite extends BaseTest
 {
 
-	@Test
+	@Test(priority = 1)
 	public void tc_4567_EditAccountTest()
 	{
-		MyAccountTestScripts myAccountTestScripts =  new MyAccountTestScripts();
-		Assert.assertTrue(myAccountTestScripts.editAccTestScript());
+		Assert.assertTrue(new MyAccountTestScripts().editAccTestScript());
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void tc_4568_EditAddrTest()
 	{
-		MyAccountTestScripts myAccountTestScripts =  new MyAccountTestScripts();
-		Assert.assertTrue(myAccountTestScripts.editAddrTestScript());
+		Assert.assertTrue( new MyAccountTestScripts().editAddrTestScript());
 	}
 	
 }

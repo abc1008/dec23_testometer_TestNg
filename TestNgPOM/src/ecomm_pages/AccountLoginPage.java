@@ -1,9 +1,15 @@
 package ecomm_pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.ExplicitWait;
 
 public class AccountLoginPage {
 	
@@ -16,6 +22,7 @@ public class AccountLoginPage {
 	private static final String buttonMyAccountByXpath = "//a[@title='My Account']";
 	private static final String buttonLogoutByXpath = "(//a[text()='Logout'])[1]";
 	private static final String buttonLoginFromMenuByXpath = "//a[text()='Login']";
+	private static final String buttonEditAccByXpath = "//a[text()='Edit Account']";
 
 	@FindBy(xpath = textBoxUserNameByXpath) 
 	private WebElement textBoxUserName;
@@ -37,6 +44,9 @@ public class AccountLoginPage {
 	
 	@FindBy(xpath = buttonLoginFromMenuByXpath)
 	private WebElement buttonLoginFromMenu;
+	
+	@FindBy(xpath = buttonEditAccByXpath) 
+	private WebElement buttonEditAccount;
 
 	
 	public AccountLoginPage(WebDriver driver)
@@ -46,8 +56,9 @@ public class AccountLoginPage {
 	}
 	
 	
-	public void performLogin(String userID, String password) throws InterruptedException
+	public boolean performLogin(String userID, String password) throws InterruptedException
 	{
+		boolean testReusltFlag = false;
 		
 		buttonMyAccount.click();
 		buttonLoginFromMenu.click();
@@ -56,7 +67,17 @@ public class AccountLoginPage {
 		textBoxPassword.sendKeys(password);
 		buttonLogin.click();
 		
-		Thread.sleep(3000);
+		if(ExplicitWait.waitUntilElementElementIsVisible(buttonEditAccount))
+		{
+			System.out.println("Login Successful");
+			testReusltFlag = true;
+		}
+		else
+		{
+			System.out.println("Login Failed.");
+		}
+		
+		return testReusltFlag;
 	}
 	
 	

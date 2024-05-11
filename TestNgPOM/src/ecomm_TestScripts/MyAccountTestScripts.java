@@ -2,17 +2,17 @@ package ecomm_TestScripts;
 
 import java.util.Base64;
 
+import ecommAppPack.EcommerceApp;
 import ecomm_Base.BaseTest;
 
 public class MyAccountTestScripts extends BaseTest
 {
-
 	public boolean editAccTestScript()
 	{
 			boolean testResult = false;
 			try 
 			{
-				if(myAccountPage.performEditAccount())
+				if(EcommerceApp.myAccountPage().performEditAccount())
 				{
 					 testResult = true;
 				}
@@ -34,7 +34,7 @@ public class MyAccountTestScripts extends BaseTest
 		
 		try
 		{
-			 if(myAccountPage.performEditAddress())
+			 if(EcommerceApp.myAccountPage().performEditAddress())
 			 {
 				 testResult = true;
 			 }
