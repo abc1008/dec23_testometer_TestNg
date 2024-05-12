@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-12T12:49:47 IST" name="Default suite" finished-at="2024-05-12T12:49:59 IST" duration-ms="11817">
+    <groups>
+    </groups>
+    <test started-at="2024-05-12T12:49:47 IST" name="Default test" finished-at="2024-05-12T12:49:59 IST" duration-ms="11817">
+      <class name="ecomm_TestSuite.ProfileIconTestSuite">
+        <test-method is-config="true" signature="initBrowser()[pri:0, instance:ecomm_TestSuite.ProfileIconTestSuite@f0da945]" started-at="2024-05-12T12:49:18 IST" name="initBrowser" finished-at="2024-05-12T12:49:47 IST" duration-ms="29381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method is-config="true" signature="login()[pri:0, instance:ecomm_TestSuite.ProfileIconTestSuite@f0da945]" started-at="2024-05-12T12:49:47 IST" name="login" finished-at="2024-05-12T12:49:52 IST" duration-ms="4484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="tc_4568_EditPasswordTest()[pri:1, instance:ecomm_TestSuite.ProfileIconTestSuite@f0da945]" started-at="2024-05-12T12:49:52 IST" name="tc_4568_EditPasswordTest" finished-at="2024-05-12T12:49:56 IST" duration-ms="4337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_4568_EditPasswordTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:ecomm_TestSuite.ProfileIconTestSuite@f0da945]" started-at="2024-05-12T12:49:56 IST" name="logout" finished-at="2024-05-12T12:49:59 IST" duration-ms="2946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ecomm_TestSuite.ProfileIconTestSuite@f0da945]" started-at="2024-05-12T12:49:59 IST" name="tearDown" finished-at="2024-05-12T12:50:00 IST" duration-ms="844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ecomm_TestSuite.ProfileIconTestSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
