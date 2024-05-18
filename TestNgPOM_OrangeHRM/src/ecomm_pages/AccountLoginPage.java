@@ -1,13 +1,16 @@
 package ecomm_pages;
 
+import java.io.IOException;
 import java.time.Duration;
 
+import org.checkerframework.checker.calledmethods.qual.EnsuresCalledMethods.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.*;
 
 import com.aventstack.extentreports.ExtentReports;
 
@@ -25,7 +28,7 @@ public class AccountLoginPage {
 	private static final String dropdownUsernameByXpath = "//span[@class='oxd-userdropdown-tab']";
 	private static final String optionLogoutFromProfileByXpath = "//a[text()='Logout']";
 	private static final String forgotPasswordLinkByXpath = "//p[text()='Forgot your password? ']";
-
+	private static final String buttonResetPasswordByXpath = "//button[text()=' Reset Password ']";
 
 	@FindBy(xpath = textBoxUserNameByXpath) 
 	private WebElement textBoxUserName;
@@ -48,6 +51,10 @@ public class AccountLoginPage {
 	@FindBy(xpath = forgotPasswordLinkByXpath)
 	private WebElement forgotPasswordLink;
 	
+	@FindBy(xpath = forgotPasswordLinkByXpath)
+	private java.util.List<WebElement> 	buttonResetPassword;
+
+	
 	public AccountLoginPage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -55,7 +62,7 @@ public class AccountLoginPage {
 	}
 	
 	
-	public boolean performLogin(String userID, String password) throws InterruptedException
+	public boolean performLogin(String userID, String password) throws InterruptedException, IOException
 	{
 		boolean testReusltFlag = false;
 	
@@ -84,7 +91,7 @@ public class AccountLoginPage {
 	}
 	
 	
-	public boolean performLogout() throws InterruptedException
+	public boolean performLogout() throws InterruptedException, IOException
 	{
 		boolean testReusltFlag = false;
 		
@@ -98,23 +105,38 @@ public class AccountLoginPage {
 		
 		if(buttonLogin.isDisplayed())
 		{
-//			System.out.println("Logout Successful");
 			ExtentReportHelper.LogPass("Logout Successful");
 			testReusltFlag = true;
 		}
 		else
 		{
-//			System.out.println("Logout Failed.");
 			ExtentReportHelper.LogFail("Logout Failed.");
 		}
 		return testReusltFlag;
 	}
 	
-	public void forgotPassword()
+	public void forgotPassword() throws IOException
 	{
-		forgotPasswordLink.click();
-		ExtentReportHelper.LogPass("Clicked on 'Forgot Password' Link.");
+		try
+		{
+			forgotPasswordLink.click();
+			ExtentReportHelper.LogPass("Clicked on 'Forgot Password' Link.");
+			
+			if(buttonResetPassword.size() > 0)
+			{
+				ExtentReportHelper.LogPass("'Forgot Password' Page displayed.");
+			}
+			else
+			{
+				ExtentReportHelper.LogFail("'Forgot Password' Page not displayed.");
+			}
+		}
+		catch (Exception ex) 
+		{
+			ExtentReportHelper.LogFail("Exception while click on forgot Password :" + ex.getMessage());
+		}
 		
+	
 	}
 	
 

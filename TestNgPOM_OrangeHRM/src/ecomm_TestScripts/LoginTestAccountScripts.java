@@ -13,12 +13,12 @@ public class LoginTestAccountScripts extends BaseTest {
 		OrangeHRMObjets.accountLoginPage().performLogin(ConfigReader.readData("userID"), ConfigReader.readData("password"));
 	}
 	
-	public void logoutTestScript() throws InterruptedException
+	public void logoutTestScript() throws InterruptedException, IOException
 	{
 		OrangeHRMObjets.accountLoginPage().performLogout();
 	}
 	
-	public void forgotPassTestScript()
+	public void forgotPassTestScript() throws IOException
 	{
 		OrangeHRMObjets.accountLoginPage().forgotPassword();
 	}

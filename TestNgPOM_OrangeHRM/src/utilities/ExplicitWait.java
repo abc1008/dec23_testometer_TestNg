@@ -12,7 +12,7 @@ public class ExplicitWait extends BaseTest
 {
 	public static boolean waitUntilElementElementIsVisible(WebElement ele)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(300));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(ele));
 		
 		if(ele.isDisplayed())

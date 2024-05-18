@@ -71,12 +71,12 @@ public class BaseTest {
 	@BeforeMethod
 	public void login() throws InterruptedException, IOException
 	{
-		ExtentReportHelper.startTest("Login_Test");
-		new LoginTestAccountScripts().loginTestScript();
+//		ExtentReportHelper.startTest("Login_Test");
+//		new LoginTestAccountScripts().loginTestScript();
 	}
 	
 	@AfterMethod
-	public void logout() throws InterruptedException
+	public void logout() throws InterruptedException, IOException
 	{
 		LoginTestAccountScripts lps = new LoginTestAccountScripts();
 		lps.logoutTestScript();

@@ -14,7 +14,11 @@ public class ProfileIconTestSuite extends BaseTest
 		Assert.assertTrue( new ProfileIconTestScripts().editPasswordTestScript());
 	}
 	
-	
+	@Test(priority = 2)
+	public void tc_4569_EditSupportClickTest()
+	{
+		Assert.assertTrue( new ProfileIconTestScripts().ProfileSupportClickTestScripts());
+	}
 	
 	
 	
