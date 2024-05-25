@@ -7,6 +7,7 @@
         <methods>
           <include name="tc_4568_EditPasswordTest"/>
           <include name="initBrowser"/>
+          <include name="tc_4569_EditSupportClickTest"/>
           <include name="tearDown"/>
           <include name="login"/>
           <include name="logout"/>

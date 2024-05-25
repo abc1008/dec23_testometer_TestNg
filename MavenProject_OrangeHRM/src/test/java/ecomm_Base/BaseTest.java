@@ -49,10 +49,11 @@ public class BaseTest {
 			System.out.println("Browser value is incorrect.");
 		}
 		
-		extentReportHelper =  new ExtentReportHelper(driver, dateTimeStamp);
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(ConfigReader.readData("testsiteurl"));
+		extentReportHelper =  new ExtentReportHelper(driver, dateTimeStamp);
 	}
 	
 	

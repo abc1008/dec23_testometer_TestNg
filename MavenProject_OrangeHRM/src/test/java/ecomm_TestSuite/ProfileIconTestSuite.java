@@ -1,11 +1,13 @@
 package ecomm_TestSuite;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import ecomm_Base.BaseTest;
 import ecomm_TestScripts.ProfileIconTestScripts;
 
+@Listeners(ecomm_Base.ListenerClass.class)
 public class ProfileIconTestSuite extends BaseTest
 {
 	@Test(priority = 1)

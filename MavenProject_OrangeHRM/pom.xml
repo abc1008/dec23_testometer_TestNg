@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.4.0</version>
+			<version>7.8.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -41,7 +41,13 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.13.0</version>
 					<configuration>
-						<!-- put your configurations here -->
+						<annotationProcessorPaths>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+								<version>1.18.26</version>
+							</path>
+						</annotationProcessorPaths>
 					</configuration>
 				</plugin>
 
